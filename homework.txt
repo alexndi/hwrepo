@@ -1,0 +1,9 @@
+Continous integration is the process in which developers commit code to the repository reguraly (each day).
+
+
+The stages of a pipeline:
+1. Developers - commit code in the version control (github, bitbucket, etc.)
+2. The code is compiled/built and gives feedback for the unit tests, written by the devs.
+3. Automated acceptance tests.
+4. User acceptance tests - end users test the software.
+5. Deploy/Release - the code is in production environment.
