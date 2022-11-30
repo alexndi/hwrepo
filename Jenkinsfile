@@ -1,7 +1,7 @@
 pipeline{
 
   agent {
-      label="windows" "Linux"
+      label windows
   }
   
   stages{
@@ -17,17 +17,17 @@ pipeline{
             env.NODE_NAME == "Local Node"
         }
       }
-      steps{
+      steps {
       	echo "Hello from test"
       }
-    stage('Publish'){
-      steps{
+    stage('Publish') {
+      steps {
       	echo "Hello from publish"
       }
     }
   }
     
-    post {
+ post {
       always {
           echo "shutdown machine"
       }
