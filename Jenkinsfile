@@ -6,6 +6,8 @@ pipeline{
   
   parameters{
       string(name:'Version', defaultValue:'abc', description:'initial version')
+      
+      
   }
   
   stages{
@@ -21,10 +23,11 @@ pipeline{
             env.NODE_NAME == "Local Node"
         }
       } 
-    }
+    
       steps {
       	echo "Hello from test"
       }
+    }
     stage('Publish') {
       steps {
       	echo "Hello from publish"
