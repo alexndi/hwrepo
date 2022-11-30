@@ -7,13 +7,7 @@ pipeline{
   parameters{
       string(name:'Version', defaultValue:'abc', description:'initial version')      
   }
-  
-  stages{
-    stage('Checkout'){
-      steps{
-      	git credentialsId: '7e688974-2bea-4d9a-98d2-adc25016f90d', poll: false, url: 'https://github.com/alexndi/hwrepo'
-      }
-    }
+ 
   
   stages{
     stage('Build'){
@@ -21,7 +15,12 @@ pipeline{
       	echo "Hello from build"
       }
     }
-    
+   
+    stage('Checkout'){
+      steps{
+      	git credentialsId: '7e688974-2bea-4d9a-98d2-adc25016f90d', poll: false, url: 'https://github.com/alexndi/hwrepo'
+      }
+    }
     stage('Test'){
       when{
         expression{
