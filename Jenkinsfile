@@ -3,12 +3,16 @@ pipeline{
 agent any
   
   stages{
-    stage("Build"){
-      echo "Hello from build"
+    stage('Build'){
+      steps{
+      	echo "Hello from build"
+      }
     }
     
-    stage("Test"){
-      echo "Hello from test"
+    stage('Test'){
+      steps{
+      	echo "Hello from test"
+      }
     }
   }
 }
