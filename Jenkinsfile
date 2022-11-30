@@ -10,6 +10,11 @@ agent any
     }
     
     stage('Test'){
+      when{
+        expression{
+            env.NODE_NAME == "Local Node"
+        }
+      }
       steps{
       	echo "Hello from test"
       }
@@ -19,16 +24,18 @@ agent any
       }
     }
   }
+    
     post{
       always{
-        echo "shutdown machine"
+          echo "shutdown machine"
       }
       success{
-        echo "congratulations!"
+          echo "congratulations!"
       }
       failure{
-        echo "send mail for failure"
+          echo "send mail for failure"
       }
     }
+  }  
 }
-}
+
