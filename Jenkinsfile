@@ -21,6 +21,7 @@ pipeline{
             env.NODE_NAME == "Local Node"
         }
       } 
+    }
       steps {
       	echo "Hello from test"
       }
