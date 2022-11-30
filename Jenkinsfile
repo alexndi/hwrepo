@@ -5,7 +5,7 @@ pipeline{
   }
   
   parameters{
-      string(name:'Version', defaulvalue:'abc', description:'initial version')
+      string(name:'Version', defaultValue:'abc', description:'initial version')
   }
   
   stages{
