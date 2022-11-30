@@ -1,6 +1,8 @@
 pipeline{
 
-  agent any
+  agent {
+      label="windows" "Linux"
+  }
   
   stages{
     stage('Build'){
@@ -25,14 +27,16 @@ pipeline{
     }
   }
     
-    post{
-      always{
+    post {
+      always {
           echo "shutdown machine"
       }
-      success{
+      
+      success {
           echo "congratulations!"
       }
-      failure{
+      
+      failure {
           echo "send mail for failure"
       }
     }
