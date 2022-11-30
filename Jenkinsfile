@@ -4,6 +4,10 @@ pipeline{
       label 'windows'
   }
   
+  parameters{
+      string(name:'Version', defaulvalue:'abc', description:'initial version')
+  }
+  
   stages{
     stage('Build'){
       steps{
@@ -16,8 +20,7 @@ pipeline{
         expression{
             env.NODE_NAME == "Local Node"
         }
-      }
-    } 
+      } 
       steps {
       	echo "Hello from test"
       }
