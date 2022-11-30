@@ -9,6 +9,13 @@ pipeline{
   }
   
   stages{
+    stage('Checkout'){
+      steps{
+      	git credentialsId: '7e688974-2bea-4d9a-98d2-adc25016f90d', poll: false, url: 'https://github.com/alexndi/hwrepo'
+      }
+    }
+  
+  stages{
     stage('Build'){
       steps{
       	echo "Hello from build"
