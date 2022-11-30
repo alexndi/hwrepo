@@ -13,6 +13,21 @@ agent any
       steps{
       	echo "Hello from test"
       }
+    stage('Publish'){
+      steps{
+      	echo "Hello from publish"
+      }
     }
   }
+    post{
+      always{
+        echo "shutdown machine"
+      }
+      success{
+        echo "congratulations!"
+      }
+      failure{
+        echo "send mail for failure"
+      }
+    }
 }
