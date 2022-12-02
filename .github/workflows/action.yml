@@ -33,7 +33,9 @@ jobs:
             path: './bar'
       # Runs a command using the runners shell
       - name: Run a script
-        run: | 
+        run: |
+          git config --global user.email "alexandernd"abv.bg"
+          git config --global user.name "alexndi"
           pwd
           ls -la
           pwd
