@@ -30,6 +30,7 @@ jobs:
         run: | 
           git config --global user.email "alexandernd@abv.bg"
           git config --global user.name "alexndi"
+          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/bosch-ecs-career-camp/homework4-alexndi
           touch test.py
           ls -la
           git branch
