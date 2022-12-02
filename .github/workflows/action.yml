@@ -55,7 +55,6 @@ jobs:
           ls -la
           ls -la
           git branch
-          git status
 
 
 
