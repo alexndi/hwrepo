@@ -12,7 +12,10 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+  
+env:
+  ## Sets environment variable
+  API_KEY: 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
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -30,7 +33,7 @@ jobs:
         run: | 
           git config --global user.email "alexandernd@abv.bg"
           git config --global user.name "alexndi"
-          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/bosch-ecs-career-camp/homework4-alexndi
+          git clone https://${{env.API_KEY}}@github.com/bosch-ecs-career-camp/homework4-alexndi
           touch test.py
           ls -la
           git branch
