@@ -34,7 +34,8 @@ jobs:
       # Runs a command using the runners shell
       - name: Run a script
         run: | 
-          touch test.py
+          echo pwd
+          cd ./bar/homework4-alexndi
           ls -la
           git branch
           git status
