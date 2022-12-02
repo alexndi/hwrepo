@@ -28,6 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: | 
+          git config --global user.email "alexandernd@abv.bg"
+          git config --global user.name "alexndi"
           touch test.py
           ls -la
           git branch
