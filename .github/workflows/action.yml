@@ -34,8 +34,8 @@ jobs:
       # Runs a command using the runners shell
       - name: Run a script
         run: | 
-          echo pwd
-          cd ./bar/homework4-alexndi
+          pwd
+          cd ./bar
           ls -la
           git branch
           git status
