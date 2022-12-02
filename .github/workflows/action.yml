@@ -39,6 +39,7 @@ jobs:
           pwd
           ls -la
           pwd
+          rm README.md
           cp /home/runner/work/hwrepo/hwrepo/bar/README.md /home/runner/work/hwrepo/hwrepo
           rm -rf bar
           ls -la
