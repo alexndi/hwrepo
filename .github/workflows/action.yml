@@ -28,6 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: | 
+          touch test.py
           ls -la
           git branch
           git status
@@ -36,6 +37,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls -la
+          git@github.com:bosch-ecs-career-camp/homework4-alexndi.git
           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/bosch-ecs-career-camp/homework4-alexndi.git target
           ls-la
           git branch
