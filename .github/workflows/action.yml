@@ -36,6 +36,7 @@ jobs:
         run: | 
           pwd
           cd ./bar
+          pwd
           ls -la
           git branch
           git status
