@@ -35,6 +35,7 @@ jobs:
       - name: Run a script
         run: | 
           pwd
+          ls -la
           cd ./bar
           pwd
           ls -la
