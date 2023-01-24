@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v3
         with:
             token: ${{ secrets.TOKEN }}
-            repository: bosch-ecs-career-camp/homework4-alexndi
+            repository: homework4-alexndi
             path: './bar'
       # Runs a command using the runners shell
       - name: Run a script
