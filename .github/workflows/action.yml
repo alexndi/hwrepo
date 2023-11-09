@@ -23,14 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - name: Checkout
-      
-        uses: actions/checkout@v3
-        with:
-            token: ${{ secrets.TOKEN }}
-            repository: homework4-alexndi
-            path: './bar'
+
       # Runs a command using the runners shell
       - name: Run a script
         run: |
