@@ -25,6 +25,7 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
+    if: github.event.review.state == 'approved'
     needs: build
     steps:
       - uses: trstringer/manual-approval@v1
