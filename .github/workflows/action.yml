@@ -31,6 +31,7 @@ jobs:
         with:
           secret: ${{ github.TOKEN }}
           approvers: alexndi
+          timeout-minutes: 1
       - name: Run a multi-line script
         run: |
           echo "It actullay waited!"
