@@ -25,10 +25,10 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    if: github.event.review.state == 'approved'
     needs: build
     steps:
       - uses: trstringer/manual-approval@v1
+        timeout-minutes: 1
         with:
           secret: ${{ github.TOKEN }}
           approvers: alexndi
