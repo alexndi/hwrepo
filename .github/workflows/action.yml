@@ -26,6 +26,6 @@ jobs:
             sleep 30
             echo "It finished"
 
-          echo "Terraform apply"
+
 
       
