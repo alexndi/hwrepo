@@ -21,6 +21,8 @@ jobs:
     steps:
        - name: Run a script
          run: |
+            echo $PATH
+            ls ~/
             ls -larth
             pwd
             touch test
