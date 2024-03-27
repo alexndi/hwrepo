@@ -23,7 +23,7 @@ jobs:
          run: |
             echo $PATH
             ls ~/
-            ls -larth
+            ls ../
             pwd
             touch test
             echo 123 >> test
