@@ -21,19 +21,13 @@ jobs:
     steps:
        - name: Run a script
          run: |
+            pwd
+            touch test
+            echo 123 >> test
+            cat test
+            pwd
             sleep 30
             echo "It finished"
-  deploy:
-      needs: build
-      concurrency:
-        group: ${{ github.workflow }}
-      name: deploy
-      runs-on: ubuntu-latest
-      steps:
-         - name: Run a script
-           run: |
-              sleep 30
-              echo "2nd finished"
 
 
 
